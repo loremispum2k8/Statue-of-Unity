@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --newWhite:#EDEDED;
+}
+@font-face {
+    font-family: 'RobotoLight';
+    src: url(fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url(fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: 'RobotoSemiBold';
+    src: url(fonts/Roboto-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'RobotoBold';
+    src: url(fonts/Roboto-Bold.ttf);
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10000px;
+    overflow-X: hidden;
+}
+.nav-bar-container{
+    z-index: 999;
+    position: fixed;
+    height: 61px;
+    width: 540px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "RobotoSemiBold";
+    background-color: rgba(255, 255, 255, 0.89);
+    border: 0.5px solid #cacaca;
+    border-radius: 43px;
+    padding: 4px;
+    gap: 4px;
+    margin-top: 40px;
+    box-shadow: 0px 4px 8px 0px hsla(0, 0%, 46%, 0.250);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation-name: navBarAnimationUp;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+}
+.navbar-curtain{
+    z-index: 999;
+    background-color: white;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation-name: hideCurtain;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    display: none;
+}
+.showCurtain{
+    animation-name: showCurtain;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes showCurtain{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes hideCurtain{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes navBarAnimationUp{
+    0%{height: 4px;}
+    100%{height: 61px;}
+}
+@keyframes navBarAnimationDown{
+    0%{height: 61px;}
+    100%{height: 4px;}
+}
+.scrolled{
+    animation-name: navBarAnimationDown;
+    animation-iteration-count: 1;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.nav-country{
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 100%;
+    color: black;
+    border-radius: 30px;
+    z-index: 990;
+}
+.idle{
+    color: #939393;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.idle:hover{
+    color: #4d4d4d;
+}
+.active{
+    background-color: #EDEDED;
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 850px;
+    background-color: black;
+}
+.header-country{
+    font-size: 2.7rem;
+    background:linear-gradient(to right, #FF6820 0%, white 50%, #046a38 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "RobotoBold";
+}
+.header-container h1{
+    color:var(--newWhite);
+    font-size: 5.8rem;
+    font-family: "RobotoBold";
+    letter-spacing: -1%;
+}
+.video-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+.video-container video{
+    width: 100%;
+    transform: scale(1.4);
+}
+.video-fade{
+    position: absolute;
+    background:linear-gradient(black 0%,#73737300 100%);
+    height: 300px;
+    width: 100%;
+    z-index: 800;
+}
+.play-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    position: absolute;
+    height: clamp(20px, 10vw ,50px);
+    width: clamp(20px, 10vw ,50px);
+    background-color: hsla(0, 0%, 73%, 0.75);
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.play-button:hover{
+    background-color: rgb(201, 201, 201);
+}
+.hidden{
+    display: none;
+}

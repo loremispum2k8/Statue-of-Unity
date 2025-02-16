@@ -7,7 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="nav-bar-container">
+        <div class="navbar-curtain"></div>
+
+        <div class="nav-country active">India</div>
+        <div class="nav-country idle">China</div>
+        <div class="nav-country idle">Indonesia</div>
+        <div class="nav-country idle">Russia</div>
+    </div>
+
+    <div class="container">
+        <div class="header-container">
+            <h2 class="header-country">Statue of Unity</h2>
+            <h1>Legendary</h1>
+            <h1>Awe-Inspiring</h1>
+        </div>
+
+        <div class="video-container">
+            <div class="video-fade"></div>
+            <video class="video" src="video/youtube_IN1slWsDfLc_1920x1080_h264.mp4" autoplay muted loop></video>
+            <div class="play-button">
+                <svg id="pause" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M9 6a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1m6 0a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1"/></svg>
+                <svg id="play" class="hidden" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="m9.524 4.938l10.092 6.21a1 1 0 0 1 0 1.704l-10.092 6.21A1 1 0 0 1 8 18.21V5.79a1 1 0 0 1 1.524-.852"/></svg>
+            </div>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
