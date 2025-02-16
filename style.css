@@ -33,7 +33,7 @@ body{
     z-index: 999;
     position: fixed;
     height: 61px;
-    width: 540px;
+    width: min(80%,540px);
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -87,12 +87,12 @@ body{
 }
 
 @keyframes navBarAnimationUp{
-    0%{height: 4px;}
+    0%{height:2px;}
     100%{height: 61px;}
 }
 @keyframes navBarAnimationDown{
     0%{height: 61px;}
-    100%{height: 4px;}
+    100%{height: 2px;}
 }
 .scrolled{
     animation-name: navBarAnimationDown;
@@ -103,7 +103,7 @@ body{
 }
 
 .nav-country{
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 2.5vw ,1.2rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,11 +138,11 @@ body{
     gap: 5px;
     align-items: center;
     justify-content: center;
-    height: 850px;
+    height: min(150vw,850px);
     background-color: black;
 }
 .header-country{
-    font-size: 2.7rem;
+    font-size: clamp(0.8rem, 8vw, 2.7rem);;
     background:linear-gradient(to right, #FF6820 0%, white 50%, #046a38 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -150,7 +150,7 @@ body{
 }
 .header-container h1{
     color:var(--newWhite);
-    font-size: 5.8rem;
+    font-size: clamp(2rem, 14vw, 5.8rem);
     font-family: "RobotoBold";
     letter-spacing: -1%;
 }
@@ -194,4 +194,19 @@ body{
 }
 .hidden{
     display: none;
+}
+
+
+@media (max-width:500px) {
+    .nav-bar-container{
+        height: 40px;
+    }
+    @keyframes navBarAnimationUp{
+        0%{height:2px;}
+        100%{height: 40px;}
+    }
+    @keyframes navBarAnimationDown{
+        0%{height: 40px;}
+        100%{height: 2px;}
+    }
 }
