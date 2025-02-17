@@ -138,7 +138,7 @@ body{
     gap: 5px;
     align-items: center;
     justify-content: center;
-    height: min(150vw,850px);
+    height: min(170vw,850px);
     background-color: black;
 }
 .header-country{
