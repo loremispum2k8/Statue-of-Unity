@@ -54,30 +54,30 @@ console.log(right)
 
 left.addEventListener('click',(e)=>{
     if(Translation>0){
-        pastTr = Translation - 1030;
+        pastTr = Translation - 1020;
 
         let i = setInterval(()=>{
             if (Translation = pastTr) {
                 clearInterval(i);
             }
 
-            Translation -= 20;
+            Translation -= 10;
             carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
-        },1);
+        },1.2);
     }
 })
 right.addEventListener('click',(e)=>{
     if(Translation < 6180){
-        pastTr = Translation + 1030;
+        pastTr = Translation + 1020;
 
         let i = setInterval(()=>{
             if (Translation = pastTr) {
                 clearInterval(i);
             }
 
-            Translation += 20;
+            Translation += 10;
             carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
-        },1);
+        },1.2);
 
 
     }
