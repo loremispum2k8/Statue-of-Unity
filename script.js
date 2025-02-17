@@ -61,7 +61,7 @@ left.addEventListener('click',(e)=>{
                 clearInterval(i);
             }
 
-            Translation -= 15;
+            Translation -= 5;
             carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
         },1.5);
     }
@@ -75,7 +75,7 @@ right.addEventListener('click',(e)=>{
                 clearInterval(i);
             }
 
-            Translation += 15;
+            Translation += 5;
             carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
         },1.5);
 
