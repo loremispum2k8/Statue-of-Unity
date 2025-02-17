@@ -222,17 +222,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap:40px;
-}
-.slide{
-    animation-name: slide;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-@keyframes slide{
-    0%{transform: translateX(-0px)}100%{transform: translateX(-1030px)}
+    gap:30px;
 }
 .carousel-inner-container div{
     border-radius: 20px;

@@ -61,9 +61,9 @@ left.addEventListener('click',(e)=>{
                 clearInterval(i);
             }
 
-            Translation -= 15;
+            Translation -= 10;
             carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
-        },1.2);
+        },1.1);
     }
 })
 right.addEventListener('click',(e)=>{
@@ -75,9 +75,9 @@ right.addEventListener('click',(e)=>{
                 clearInterval(i);
             }
 
-            Translation += 15;
+            Translation += 10;
             carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
-        },1.2);
+        },1.1);
 
 
     }
