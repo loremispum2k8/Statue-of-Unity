@@ -57,13 +57,13 @@ left.addEventListener('click',(e)=>{
         pastTr = Translation - 1030;
 
         let i = setInterval(()=>{
-            if (Translation <= pastTr) {
+            if (Translation = pastTr) {
                 clearInterval(i);
             }
 
-            Translation -= 5;
+            Translation -= 20;
             carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
-        },1.5);
+        },1);
     }
 })
 right.addEventListener('click',(e)=>{
@@ -71,13 +71,13 @@ right.addEventListener('click',(e)=>{
         pastTr = Translation + 1030;
 
         let i = setInterval(()=>{
-            if (Translation >= pastTr) {
+            if (Translation = pastTr) {
                 clearInterval(i);
             }
 
-            Translation += 5;
+            Translation += 20;
             carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
-        },1.5);
+        },1);
 
 
     }
