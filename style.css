@@ -20,6 +20,13 @@
     font-family: 'RobotoBold';
     src: url(fonts/Roboto-Bold.ttf);
 }
+.universal-title{
+    font-size: clamp(0.8rem, 8vw, 3rem);;
+    font-family: "RobotoBold";
+}
+
+
+
 
 
 body{
@@ -198,10 +205,12 @@ body{
 }
 
 
-.universal-title{
-    font-size: 48px;
-    font-family: "RobotoBold";
-}
+
+
+
+
+
+
 .slider-container{
     display: flex;
     flex-direction: column;
@@ -214,7 +223,7 @@ body{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height:600px;
+    height:clamp(400px, 90vw ,600px);
     width: 7180px;
 }
 .carousel-inner-container{
@@ -230,6 +239,9 @@ body{
     height: 600px;
     position: relative;
     overflow: hidden;
+}
+.carousel-inner-container div img{
+    border-radius: 20px;
 }
 .carousel-inner-container{
     object-fit: cover;
@@ -309,5 +321,24 @@ body{
     }
     #pause{
         scale: 0.8;
+    }
+
+
+    .slider-container{
+        padding-left: 20px;
+        gap: 40px;
+    }
+    .left svg,.right svg{
+        scale: 0.8;
+    }
+    .carousel-buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        align-self: flex-end;
+        margin-right: 0px;
+        margin-left: 20px;
+        align-self: flex-start;
     }
 }
