@@ -2,7 +2,6 @@ const navBar = document.querySelector('.nav-bar-container');
 let scrollTrack;
 let newScroll;
 const curtain = document.querySelector('.navbar-curtain');
-console.log(curtain)
 
 
 document.addEventListener('scroll', (e)=>{
@@ -37,3 +36,51 @@ playPause.addEventListener('click',(e)=>{
         video.play();
     }
 })
+
+
+
+
+
+let carouselInnerContainer = document.querySelector('.carousel-inner-container');
+let Translation = new Number;
+let pastTr;
+
+
+let left = document.querySelector('.left')
+let right = document.querySelector('.right')
+
+console.log(left)
+console.log(right)
+
+left.addEventListener('click',(e)=>{
+    if(Translation>0){
+        pastTr = Translation - 1030;
+
+        let i = setInterval(()=>{
+            if (Translation <= pastTr) {
+                clearInterval(i);
+            }
+
+            Translation -= 5;
+            carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
+        },5);
+    }
+})
+right.addEventListener('click',(e)=>{
+    if(Translation < 6180){
+        pastTr = Translation + 1030;
+
+        let i = setInterval(()=>{
+            if (Translation >= pastTr) {
+                clearInterval(i);
+            }
+
+            Translation += 5;
+            carouselInnerContainer.style.transform = `translateX(-${Translation}px)`
+        },5);
+
+
+    }
+})
+
+
