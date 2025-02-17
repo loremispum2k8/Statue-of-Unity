@@ -41,7 +41,7 @@ body{
     z-index: 999;
     position: fixed;
     height: 61px;
-    width: min(80%,540px);
+    width: min(80vw,540px);
     overflow: hidden;
     display: flex;
     flex-direction: row;
